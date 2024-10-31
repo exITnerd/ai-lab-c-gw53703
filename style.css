@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    padding: 20px;
+    height: 100%;
+}
+
+.section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section h2 {
+    margin-bottom: 10px;
+}
+
+.map-section, .raster-section {
+    height: 400px;
+    width: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+#rasterMap {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.puzzle-section, .puzzle-board {
+    height: 400px;
+}
+
+#puzzleContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.puzzle-piece {
+    width: 100%;
+    height: 80px;
+    cursor: move;
+    overflow: hidden;
+}
+
+#dropArea {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.drop-area {
+    border: 1px dashed #333;
+    background-color: #f0f8ff;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#win-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    visibility: hidden;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease;
+    border-radius: 15px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#win-screen .win-message {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#replay-button {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#replay-button:hover {
+    background-color: #ff1f1f;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0069d9;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapy + Leaflet = Puzzle</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="leaflet-1.7.1/leaflet.css" />
+    <script src="leaflet-1.7.1/leaflet-src.js"></script>
+    <script src="leaflet-1.7.1/leaflet-providers.js"></script>
+    <script src="leaflet-1.7.1/leaflet-image.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="section map-section">
+            <h2>Mapa</h2>
+            <div id="map"></div>
+        </div>
+
+        <div class="section raster-section">
+            <h2>Zdjęcie mapy po konwersji na raster</h2>
+            <canvas id="rasterMap" style="display: none;"></canvas>
+        </div>
+
+        <button id="getLocation">Moja lokalizacja</button>
+        <button id="saveButton">Pobierz mapę (rastrową)</button>
+
+        <div class="section puzzle-section">
+            <h2>Pocięte kawałki puzzli</h2>
+            <div id="puzzleContainer"></div>
+        </div>
+
+        <div class="section puzzle-board">
+            <h2>Miejsce do układania puzzli</h2>
+            <div id="dropArea"></div>
+        </div>
+    </div>
+
+    <div id="message" class=""></div>
+    
+    <div id="win-screen" class="win-screen">
+        <h1>Gratulacje! Poprawnie ułożyłeś całe puzzle!</h1>
+        <button id="replay-button">Ułóż ponownie</button>
+    </div>
+</body>
+</html>
